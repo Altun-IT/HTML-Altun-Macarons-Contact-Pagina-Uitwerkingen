@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altun Macarons</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Phosphor Icons voor de Shopping Bag -->
+    <script src="https://unpkg.com/phosphor-icons"></script>
+  
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar">
+    <img src="./../assets/logo.png" alt="AltunIT Logo" class="navbar-logo">
+    <ul class="menu">
+        <li>Home</li>
+        <li>Shop</li>
+        <li>Contact</li>
+        <li>
+            <div class="cart-icon">
+                <i class="ph ph-shopping-bag" style="font-size: 26px;"></i>
+            </div>
+        </li>
+    </ul>
+</nav>  
+
+<!-- Hoofdinhoud van de pagina -->
+ <main>
+<div class="contact">
+    <div class="leftSide" style="background-image: url('./../assets/MacaronContactPage.png');">
+    </div>
+    <div class="rightSide">
+        <h1>Contact</h1>
+        <form action="/verzenden" method="POST">
+            <label for="details-firstName">Voornaam</label>
+                <input
+                    type="text"
+                    id="details-firstName"
+                    placeholder="Typ hier je voornaam"
+                >
+            
+
+            <label for="details-lastName">Achternaam</label>
+                <input
+                    type="text"
+                    id="details-lastName"
+                    placeholder="Typ hier je achternaam"
+                >
+
+            <label for="details-email">E-mailadres</label>
+                <input
+                    type="email"
+                    id="details-email"
+                    placeholder="Typ hier je e-mailadres"
+                >
+
+            <label for="details-message">Bericht</label>
+                <textarea
+                    name="details-message"
+                    id="details-message"
+                    rows="9"
+                    cols="60"
+                    placeholder="Typ hier je bericht"
+                    maxLength="250"
+                ></textarea>
+
+            <button type="submit">Verzenden</button>
+        </form>
+    </div>
+</div>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <span>Copyright 2024</span>
+        <a href="https://www.altunit.nl" class="logo-link" target="_blank">
+            <img src="./../assets/logo.png" alt="AltunIT Logo" class="footer-logo">
+        </a>
+        <span>| All rights reserved</span>
+    </div>
+</footer>
+</body>
+</html>

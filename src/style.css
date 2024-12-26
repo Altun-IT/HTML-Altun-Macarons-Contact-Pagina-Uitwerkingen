@@ -1,0 +1,228 @@
+/* Import Google Fonts */
+/* Hiermee importeer je verschillende Google Fonts die in je project worden gebruikt. */
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@100&family=Roboto:ital,wght@0,400;1,300&family=Satisfy&family=Simonetta:ital@1&family=Tangerine:wght@700&display=swap');
+
+/* Universele selector */
+/* Deze selector zorgt ervoor dat voor alle elementen op de pagina, de marges en padding op nul worden gezet en dat de padding en borders worden meegenomen in de breedteberekening dankzij box-sizing: border-box. Dit voorkomt onverwachte ruimte rondom elementen. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Algemene stijlen voor het hele document */
+/* Hier worden de basisstijlen voor de body ingesteld. Een standaard lettertype wordt toegewezen en marges en padding worden ook op nul gezet om te zorgen voor consistente opmaak in verschillende browsers. */
+body {
+    font-family: 'Montserrat', sans-serif; /* Montserrat is een eenvoudig leesbaar font */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Zorgt ervoor dat padding en borders worden meegenomen in de breedte */
+}
+
+/* Navbar styling */
+/* De navigatiebalk gebruikt Flexbox om de inhoud netjes uit te lijnen. Het logo wordt naar links uitgelijnd en het menu naar rechts. */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Logo links, menu rechts */
+    align-items: center; /* Verticaal centreren van alle elementen in de navbar */
+    background-color: #93939c; /* Grijze achtergrondkleur */
+    padding: 10px 40px; /* Ruimte rondom de navigatie */
+    height: 70px;
+    box-sizing: border-box; /* Zorgt ervoor dat padding wordt meegerekend in de hoogte */
+}
+
+/* Logo in de navigatiebalk */
+/* Het logo van de website wordt gestyled met een specifieke grootte */
+.navbar-logo {
+    width: 120px; /* Grootte van het logo */
+}
+
+/* Menu styling */
+/* Hier worden de lijstitems van het navigatiemenu gestyled. Flexbox zorgt ervoor dat de items horizontaal naast elkaar worden geplaatst. */
+.menu {
+    list-style: none; /* Verwijder de standaard opsommingstekens van de lijst */
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Verticaal gecentreerd */
+}
+
+/* Stijlen voor menu-items */
+/* Specifieke styling voor individuele items in het navigatiemenu. */
+.menu li {
+    margin-left: 30px; /* Ruimte tussen de menu-items */
+    font-size: 20px;
+    font-weight: 600; /* Vetgedrukte letters voor duidelijkheid */
+    color: white; /* Witte tekstkleur voor zichtbaarheid */
+    cursor: pointer; /* Verandert de cursor naar een handje om te tonen dat de items klikbaar zijn */
+}
+
+/* Hover-effect voor menu-items */
+/* Bij hover verandert de tekstkleur om interactie te benadrukken */
+.menu li:hover {
+    color: #d1d1d1; /* Verandert de tekstkleur bij hover voor een interactief effect */
+}
+
+/* Shopping bag icon styling */
+/* Het winkelwagen-icoon wordt netjes naast de tekst uitgelijnd. */
+.cart-icon {
+    display: inline-block; /* Houdt het inline met de rest van de items */
+}
+
+/* Styling voor het shopping bag icoon */
+.cart-icon i {
+    color: white; /* Kleur van het shopping bag icoon */
+    font-size: 24px; /* Grootte van het icoon */
+}
+
+/* Contact hoofdinhoud styling */
+/* Styling voor de contactpagina met twee zijden: een afbeelding en een formulier */
+.contact {
+    width: 100%;
+    height: 83vh;
+    display: flex;
+}
+
+/* Linkerkant van de contactpagina */
+/* Deze kant bevat een achtergrondafbeelding die volledig de beschikbare ruimte vult. */
+.contact .leftSide {
+    height: 100%;
+    flex: 50%; /* Neemt 50% van de beschikbare breedte */
+    background-position: center; /* Centreert de afbeelding */
+    background-repeat: no-repeat; /* Voorkomt herhaling van de afbeelding */
+    background-size: cover; /* Zorgt ervoor dat de afbeelding de hele ruimte vult */
+}
+
+/* Rechterkant van de contactpagina */
+/* Bevat het formulier en de titel voor de contactpagina */
+.contact .rightSide {
+    height: 100%;
+    flex: 50%; /* Neemt 50% van de beschikbare breedte */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Titel van de contactpagina */
+.contact .rightSide h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    margin-top: 50px;
+    margin-left: 10%;
+    color: #676772;
+}
+
+/* Styling voor formulieren */
+/* Algemene styling voor de contactformulieren */
+form {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    padding: 10%; /* Ruimte binnen het formulier */
+    margin-top: -80px; /* Negatieve marge om ruimte bovenin te compenseren */
+}
+
+/* Styling voor invoervelden in formulieren */
+/* Standaard stijl voor alle invoervelden */
+form input {
+    height: 40px;
+    width: 80%; /* Invoervelden vullen 80% van de breedte */
+    border: none; /* Verwijder randen */
+    border-bottom: 1px solid #121619; /* Voeg een lijn toe onder het veld */
+    color: black;
+}
+
+/* Styling voor tekstgebieden in formulieren */
+/* Overeenkomstige stijl als de invoervelden */
+form textarea {
+    margin-top: 15px;
+    height: 40px;
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid #121619;
+    color: black;
+}
+
+/* Placeholder styling */
+/* Styling voor de tekst die verschijnt in lege velden */
+input::placeholder,
+textarea::placeholder {
+    color: #9999a1;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* Focus styling voor invoervelden en tekstgebieden */
+/* Wanneer een gebruiker op een veld klikt */
+form input:focus,
+textarea:focus {
+    outline: none; /* Verwijder standaard outline */
+}
+
+/* Labels in formulieren */
+/* Styling voor de tekst naast de invoervelden */
+form label {
+    margin-top: 15px;
+    color: #676772; /* Donkergrijze kleur voor de tekst */
+    font-weight: 700; /* Maakt de tekst vetgedrukt */
+}
+
+/* Knop styling */
+/* Styling voor de verzendknop van het formulier */
+form button {
+    margin-top: 40px; /* Extra ruimte boven de knop */
+    width: 180px;
+    height: 50px;
+    border: none;
+    border-radius: 0;
+    background-color: #9999a1; /* Achtergrondkleur van de knop */
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Hover-effect voor de knop */
+/* Verandert de achtergrondkleur wanneer de knop wordt aangewezen */
+form button:hover {
+    background-color: #676772;
+    transition: 0.3s ease-in;
+}
+
+/* Footer styling */
+/* De footer gebruikt een kleurverloop en Flexbox voor het uitlijnen van de tekst en het logo. */
+.footer {
+    background: linear-gradient(45deg, rgb(125, 125, 129) 0%, rgb(198, 198, 201) 100%);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Inhoud van de footer */
+/* Flexbox wordt gebruikt om de tekst en het logo netjes naast elkaar te plaatsen */
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Ruimte tussen elementen */
+}
+
+/* Footer-logo */
+/* Styling voor het logo in de footer */
+.footer-logo {
+    height: 14px;
+    width: auto;
+}
+
+/* Tekst in de footer */
+/* Specifieke styling voor de tekst van de footer */
+.footer-content span {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+}
